@@ -6,22 +6,22 @@
 import re
 
 def clean_string(string):
-	regex = re.compile('[^a-zA-z]')
-	return regex.sub('', string).lower()
+    regex = re.compile('[^a-zA-z]')
+    return regex.sub('', string).lower()
 
-def pal_perm (string):
+def pal_perm(string):
 
-	# Get rid of any whitespace or non-letter characters
-	string = clean_string(string)
+    # Get rid of any whitespace or non-letter characters
+    string = clean_string(string)
 
-	char_count = set()
-	for c in string:
-		if c in char_count:
-			char_count.remove(c)
-		else:
-			char_count.add(c)
+    char_count = set()
+    for c in string:
+        if c in char_count:
+            char_count.remove(c)
+        else:
+            char_count.add(c)
 
-	return len(char_count) <= 1
+    return len(char_count) <= 1
 
 print("Taco Cat:", pal_perm("Taco Cat"))
 # print True

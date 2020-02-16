@@ -18,8 +18,18 @@ class StackOfPlates:
         if len(self.stack_list) == 0:
             return None
         item = self.stack_list[-1].pop()
-        if self.stack_list[-1].length == 0:
+        while len(self.stack_list) > 0 and self.stack_list[-1].length == 0:
             self.stack_list.pop()
+        return item
+
+    def pop_at(self, stack_num):
+        if stack_num >= len(self.stack_list):
+            return None
+        stack = self.stack_list[stack_num]
+        if stack.isEmpty():
+            return None
+
+        item = self.stack_list[stack_num].pop()
         return item
 
     def peek(self):
@@ -43,3 +53,11 @@ if __name__ == "__main__":
     while not stack_of_plates.isEmpty():
         print("Popped: ", stack_of_plates.pop())
         print("Number of Stacks: ", len(stack_of_plates.stack_list))
+
+    stack_of_plates.push(1)
+    stack_of_plates.push(2)
+    stack_of_plates.push(3)
+    stack_of_plates.pop_at(0)
+
+    stack_of_plates.pop()
+    print(stack_of_plates.peek())

@@ -36,18 +36,19 @@ class MinStack:
     def get_min(self):
         return self.min
 
+if __name__ == "__main__":
+    # TEST
+    min_stack = MinStack()
+    min_stack.push(4)
+    min_stack.push(2)
+    min_stack.push(2)
+    min_stack.push(3)
 
-min_stack = MinStack()
-min_stack.push(4)
-min_stack.push(2)
-min_stack.push(2)
-min_stack.push(3)
-
-print(min_stack.get_min())
-min_stack.pop()
-min_stack.pop()
-print(min_stack.get_min())
-min_stack.pop()
-print(min_stack.get_min())
-min_stack.pop()
-print(min_stack.get_min())
+    print(min_stack.get_min())
+    min_stack.pop()
+    min_stack.pop()
+    print(min_stack.get_min())
+    min_stack.pop()
+    print(min_stack.get_min())
+    min_stack.pop()
+    print(min_stack.get_min())

@@ -100,14 +100,15 @@ class MultiStack:
             total += stack.size
         return total
 
-
-stack = MultiStack(capacity=1)
-stack.push(1, 5)
-stack.push(1, 2)
-stack.push(2, 3)
-stack.pop(1)
-stack.pop(2)
-stack.peek(1)
+if __name__ == "__main__":
+    # TEST
+    stack = MultiStack(capacity=1)
+    stack.push(1, 5)
+    stack.push(1, 2)
+    stack.push(2, 3)
+    stack.pop(1)
+    stack.pop(2)
+    stack.peek(1)
 
 for i in stack.values:
     print(i)

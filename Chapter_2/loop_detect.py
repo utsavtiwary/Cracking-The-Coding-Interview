@@ -17,19 +17,21 @@ def loop_detect(head):
             return slow
 
     return None
+    
+if __name__ == "__main__":
+    # TEST
+    A = LinkedList("A")
+    B = LinkedList("B")
+    C = LinkedList("C")
+    D = LinkedList("D")
+    E = LinkedList("E")
 
-A = LinkedList("A")
-B = LinkedList("B")
-C = LinkedList("C")
-D = LinkedList("D")
-E = LinkedList("E")
+    A.set_next(B)
+    B.set_next(C)
+    C.set_next(D)
+    D.set_next(E)
+    E.set_next(C)
 
-A.set_next(B)
-B.set_next(C)
-C.set_next(D)
-D.set_next(E)
-E.set_next(C)
+    head = A
 
-head = A
-
-print_list(loop_detect(head))
+    print_list(loop_detect(head))

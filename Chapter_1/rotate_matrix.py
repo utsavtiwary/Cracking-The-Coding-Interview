@@ -20,9 +20,10 @@ def rotate_matrix(matrix):
 
     return matrix
 
+if __name__ == "__main__":
+    # TEST
+    input_matrix = np.arange(1, 122).reshape(11, 11)
+    print("INPUT:\n", input_matrix)
 
-input_matrix = np.arange(1, 122).reshape(11, 11)
-print("INPUT:\n", input_matrix)
-
-output_matrix = rotate_matrix(input_matrix)
-print("OUTPUT\n", output_matrix)
+    output_matrix = rotate_matrix(input_matrix)
+    print("OUTPUT\n", output_matrix)

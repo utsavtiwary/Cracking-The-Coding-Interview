@@ -31,13 +31,14 @@ class Queue:
     def isEmpty(self):
         return not self.first
 
-# TEST
-queue = Queue()
-queue.add(1)
-queue.add(2)
-queue.add(3)
+if __name__ == "__main__":
+    # TEST
+    queue = Queue()
+    queue.add(1)
+    queue.add(2)
+    queue.add(3)
 
-print(queue.remove())
-print(queue.peek())
-print(queue.remove())
-print(queue.isEmpty())
+    print(queue.remove())
+    print(queue.peek())
+    print(queue.remove())
+    print(queue.isEmpty())

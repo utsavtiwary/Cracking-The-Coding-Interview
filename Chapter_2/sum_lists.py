@@ -58,18 +58,20 @@ def sum_lists(l1, l2):
 
     return longer
 
-first_1 = LinkedList(7)
-first_2 = LinkedList(1)
-first_3 = LinkedList(6)
+if __name__ == "__main__":
+    # TEST
+    first_1 = LinkedList(7)
+    first_2 = LinkedList(1)
+    first_3 = LinkedList(6)
 
-sec_1 = LinkedList(5)
-sec_2 = LinkedList(9)
-sec_3 = LinkedList(2)
+    sec_1 = LinkedList(5)
+    sec_2 = LinkedList(9)
+    sec_3 = LinkedList(2)
 
-first_1.next, first_2.next, sec_1.next, sec_2.next = first_2, first_3, sec_2, sec_3
+    first_1.next, first_2.next, sec_1.next, sec_2.next = first_2, first_3, sec_2, sec_3
 
-output = sum_lists(first_1, sec_1)
-print_list(output)
+    output = sum_lists(first_1, sec_1)
+    print_list(output)
 
 
 

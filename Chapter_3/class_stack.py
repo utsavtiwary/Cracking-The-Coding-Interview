@@ -11,12 +11,14 @@ class Stack:
             return None
         output = self.top.item
         self.top = self.top.next
+        self.length -= 1
         return output
 
     def push(self, item):
         new_top = ListNode(item)
         new_top.next = self.top
         self.top = new_top
+        self.length += 1
 
     def peek(self):
         if not self.top:
@@ -26,13 +28,14 @@ class Stack:
     def isEmpty(self):
         return self.top is None
 
-# TEST
-stack = Stack()
-stack.push(1)
-stack.push(2)
-stack.push(3)
+if __name__ == "__main__":
+    # TEST
+    stack = Stack()
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
 
-print(stack.pop())
-print(stack.peek())
-print(stack.pop())
-print(stack.isEmpty())
+    print(stack.pop())
+    print(stack.peek())
+    print(stack.pop())
+    print(stack.isEmpty())

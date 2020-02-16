@@ -23,11 +23,13 @@ def pal_perm(string):
 
     return len(char_count) <= 1
 
-print("Taco Cat:", pal_perm("Taco Cat"))
-# print True
+if __name__ == "__main__":
+    # TEST
+    print("Taco Cat:", pal_perm("Taco Cat"))
+    # print True
 
-print("Taco59Cat:", pal_perm("Taco59Cat"))
-# print True
+    print("Taco59Cat:", pal_perm("Taco59Cat"))
+    # print True
 
-print("FooBar:", pal_perm("FooBar"))
-# print False
+    print("FooBar:", pal_perm("FooBar"))
+    # print False
